@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2013
+Project("{0F582216-729C-A57E-713B-D889CF6B10AC}") = "Kreps-note", "Kreps-note.vcxproj", "{B1CD1FC3-EF48-741D-F2DC-378474894612}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1CD1FC3-EF48-741D-F2DC-378474894612}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B1CD1FC3-EF48-741D-F2DC-378474894612}.Debug|Win32.Build.0 = Debug|Win32
+		{B1CD1FC3-EF48-741D-F2DC-378474894612}.Release|Win32.ActiveCfg = Release|Win32
+		{B1CD1FC3-EF48-741D-F2DC-378474894612}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
