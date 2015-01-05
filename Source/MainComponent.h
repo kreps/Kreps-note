@@ -1,36 +1,70 @@
 /*
   ==============================================================================
 
-    This file was auto-generated!
+  This is an automatically generated GUI class created by the Introjucer!
+
+  Be careful when adding custom code to these files, as only the code within
+  the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
+  and re-saved.
+
+  Created with Introjucer version: 3.1.1
+
+  ------------------------------------------------------------------------------
+
+  The Introjucer is part of the JUCE library - "Jules' Utility Class Extensions"
+  Copyright 2004-13 by Raw Material Software Ltd.
 
   ==============================================================================
 */
 
-#ifndef MAINCOMPONENT_H_INCLUDED
-#define MAINCOMPONENT_H_INCLUDED
+#ifndef __JUCE_HEADER_9002020A4DD09B20__
+#define __JUCE_HEADER_9002020A4DD09B20__
 
-#include "../JuceLibraryCode/JuceHeader.h"
+//[Headers]     -- You can add your own extra header files here --
+#include "JuceHeader.h"
+//[/Headers]
+
 
 
 //==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
+/**
+                                                                    //[Comments]
+    An auto-generated component, created by the Introjucer.
+
+    Describe your class and how it works here!
+                                                                    //[/Comments]
 */
-class MainContentComponent   : public Component
+class MainComponent  : public Component,
+                       public ButtonListener
 {
 public:
     //==============================================================================
-    MainContentComponent();
-    ~MainContentComponent();
+    MainComponent ();
+    ~MainComponent();
 
-    void paint (Graphics&);
+    //==============================================================================
+    //[UserMethods]     -- You can add your own custom methods in this section.
+    //[/UserMethods]
+
+    void paint (Graphics& g);
     void resized();
+    void buttonClicked (Button* buttonThatWasClicked);
+
+
 
 private:
+    //[UserVariables]   -- You can add your own custom variables in this section.
+    //[/UserVariables]
+
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainContentComponent)
+    ScopedPointer<TextButton> textButton;
+
+
+    //==============================================================================
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
 
+//[EndFile] You can add extra defines here...
+//[/EndFile]
 
-#endif  // MAINCOMPONENT_H_INCLUDED
+#endif   // __JUCE_HEADER_9002020A4DD09B20__
