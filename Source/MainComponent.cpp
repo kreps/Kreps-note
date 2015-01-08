@@ -85,7 +85,7 @@ void MainComponent::buttonClicked (Button* buttonThatWasClicked)
     if (buttonThatWasClicked == textButton)
     {
         //[UserButtonCode_textButton] -- add your button handler code here..
-        
+
         File inFile = File::createFileWithoutCheckingPath("c:\\temp\\default.mid"); //Not suggested to use this method exactly - just for show
         FileInputStream is(inFile);
 
@@ -96,7 +96,7 @@ void MainComponent::buttonClicked (Button* buttonThatWasClicked)
         seq.addEvent(MidiMessage(0x90, 0x64, 0x88, 0));
         seq.addEvent(MidiMessage(0x80, 0x64, 0x88, 40000.0));
         midiFile.addTrack(seq);
-        
+
         File myFile = File::createFileWithoutCheckingPath("c:\\temp\\test.mid"); //Not suggested to use this method exactly - just for show
 
         FileOutputStream myStream(myFile);
