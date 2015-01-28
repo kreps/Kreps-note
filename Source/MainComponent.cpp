@@ -29,8 +29,8 @@
 //==============================================================================
 MainComponent::MainComponent ()
 {
-    addAndMakeVisible (textButton = new TextButton ("new button"));
-    textButton->addListener (this);
+    addAndMakeVisible (generateMidiBtn = new TextButton ("new button"));
+    generateMidiBtn->addListener (this);
 
 
     //[UserPreSize]
@@ -48,7 +48,7 @@ MainComponent::~MainComponent()
     //[Destructor_pre]. You can add your own custom destruction code here..
     //[/Destructor_pre]
 
-    textButton = nullptr;
+    generateMidiBtn = nullptr;
 
 
     //[Destructor]. You can add your own custom destruction code here..
@@ -72,7 +72,7 @@ void MainComponent::resized()
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
 
-    textButton->setBounds (72, 122, 150, 24);
+    generateMidiBtn->setBounds (40, 56, 150, 24);
     //[UserResized] Add your own custom resize handling here..
     //[/UserResized]
 }
@@ -82,29 +82,10 @@ void MainComponent::buttonClicked (Button* buttonThatWasClicked)
     //[UserbuttonClicked_Pre]
     //[/UserbuttonClicked_Pre]
 
-    if (buttonThatWasClicked == textButton)
+    if (buttonThatWasClicked == generateMidiBtn)
     {
-        //[UserButtonCode_textButton] -- add your button handler code here..
-
-        File inFile = File::createFileWithoutCheckingPath("c:\\temp\\default.mid"); //Not suggested to use this method exactly - just for show
-        FileInputStream is(inFile);
-
-        MidiFile midiFile;
-        //midiFile.readFrom(is);
-
-        MidiMessageSequence seq = MidiMessageSequence();
-        seq.addEvent(MidiMessage(0x90, 0x64, 0x88, 0));
-        seq.addEvent(MidiMessage(0x80, 0x64, 0x88, 40000.0));
-        midiFile.addTrack(seq);
-
-        File myFile = File::createFileWithoutCheckingPath("c:\\temp\\test.mid"); //Not suggested to use this method exactly - just for show
-
-        FileOutputStream myStream(myFile);
-        midiFile.writeTo(myStream);
-
-
-        AlertWindow::showMessageBox(AlertWindow::AlertIconType::NoIcon, "Hiider", "Ullala clicked!");
-        //[/UserButtonCode_textButton]
+        //[UserButtonCode_generateMidiBtn] -- add your button handler code here..
+        //[/UserButtonCode_generateMidiBtn]
     }
 
     //[UserbuttonClicked_Post]
@@ -131,8 +112,8 @@ BEGIN_JUCER_METADATA
                  snapPixels="8" snapActive="1" snapShown="1" overlayOpacity="0.330"
                  fixedSize="0" initialWidth="600" initialHeight="400">
   <BACKGROUND backgroundColour="ffffffff"/>
-  <TEXTBUTTON name="new button" id="a9797476a37b3cc3" memberName="textButton"
-              virtualName="" explicitFocusOrder="0" pos="72 122 150 24" buttonText="new button"
+  <TEXTBUTTON name="new button" id="a9797476a37b3cc3" memberName="generateMidiBtn"
+              virtualName="" explicitFocusOrder="0" pos="40 56 150 24" buttonText="new button"
               connectedEdges="0" needsCallback="1" radioGroupId="0"/>
 </JUCER_COMPONENT>
 

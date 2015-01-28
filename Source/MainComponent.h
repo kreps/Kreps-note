@@ -57,7 +57,7 @@ private:
     //[/UserVariables]
 
     //==============================================================================
-    ScopedPointer<TextButton> textButton;
+    ScopedPointer<TextButton> generateMidiBtn;
 
 
     //==============================================================================
