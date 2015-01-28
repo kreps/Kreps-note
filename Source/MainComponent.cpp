@@ -72,7 +72,7 @@ void MainComponent::resized()
     //[UserPreResize] Add your own custom resize code here..
     //[/UserPreResize]
 
-    textButton->setBounds (16, 32, 150, 24);
+    textButton->setBounds (72, 122, 150, 24);
     //[UserResized] Add your own custom resize handling here..
     //[/UserResized]
 }
@@ -132,7 +132,7 @@ BEGIN_JUCER_METADATA
                  fixedSize="0" initialWidth="600" initialHeight="400">
   <BACKGROUND backgroundColour="ffffffff"/>
   <TEXTBUTTON name="new button" id="a9797476a37b3cc3" memberName="textButton"
-              virtualName="" explicitFocusOrder="0" pos="16 32 150 24" buttonText="new button"
+              virtualName="" explicitFocusOrder="0" pos="72 122 150 24" buttonText="new button"
               connectedEdges="0" needsCallback="1" radioGroupId="0"/>
 </JUCER_COMPONENT>
 
